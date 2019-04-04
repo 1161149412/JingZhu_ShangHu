@@ -20,7 +20,9 @@
         <activity android:name=".tixian.TiXianActivity" />
         <activity android:name=".tixian.AddBankCardActivity" />
         <activity android:name=".tixian.TiXianJiLuActivity" />
-        <activity android:name=".tixian.TiXianShowActivity"></activity>
+        <activity android:name=".tixian.TiXianShowActivity" />
+        <activity android:name=".filter.Filter_TixianActivity" />
+        <activity android:name=".filter.Filter_SheBeiActivity"></activity>
     </application>
 
 </manifest>

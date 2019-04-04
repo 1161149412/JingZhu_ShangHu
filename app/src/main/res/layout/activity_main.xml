@@ -32,11 +32,13 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/index_icon"
                     android:layout_width="@dimen/dp_23"
                     android:layout_height="@dimen/dp_23"
                     android:src="@mipmap/index_home_hover" />
 
                 <TextView
+                    android:id="@+id/index_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="首页"
@@ -60,11 +62,13 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/zhangdan_icon"
                     android:layout_width="@dimen/dp_23"
                     android:layout_height="@dimen/dp_23"
                     android:src="@mipmap/index_bill_nomal" />
 
                 <TextView
+                    android:id="@+id/zhangdan_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="账单"
@@ -88,11 +92,13 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/shebei_icon"
                     android:layout_width="@dimen/dp_23"
                     android:layout_height="@dimen/dp_23"
                     android:src="@mipmap/index_equipment_nomal" />
 
                 <TextView
+                    android:id="@+id/shebei_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="设备"

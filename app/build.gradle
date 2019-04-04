@@ -53,4 +53,6 @@ dependencies {
     }
     //adapter
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.22'
+    //时间选择器
+    implementation 'com.contrarywind:Android-PickerView:4.1.7'
 }

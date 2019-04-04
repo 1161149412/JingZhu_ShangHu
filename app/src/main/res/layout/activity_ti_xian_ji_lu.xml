@@ -15,12 +15,32 @@
             android:layout_height="match_parent">
 
             <ImageView style="@style/titleback" />
+
         </RelativeLayout>
 
 
         <TextView
             style="@style/titletext"
             android:text="提现记录" />
+
+        <TextView
+            android:id="@+id/bt_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_29"
+            android:text="筛选"
+            android:textColor="#fff"
+            android:textSize="@dimen/sp_14" />
+
+        <ImageView
+            android:layout_width="@dimen/dp_13"
+            android:layout_height="@dimen/dp_11"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_13"
+            android:src="@mipmap/filter_botton" />
     </RelativeLayout>
 
     <com.androidkun.xtablayout.XTabLayout

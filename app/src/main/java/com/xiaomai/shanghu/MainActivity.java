@@ -5,8 +5,10 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.xiaomai.shanghu.base.BaseActivity;
 import com.xiaomai.shanghu.indexfragment.Index_Fragment;
@@ -30,6 +32,18 @@ public class MainActivity extends BaseActivity {
     RelativeLayout btIndexZhangdan;
     @BindView(R.id.bt_index_Shebei)
     RelativeLayout btIndexShebei;
+    @BindView(R.id.index_icon)
+    ImageView indexIcon;
+    @BindView(R.id.index_name)
+    TextView indexName;
+    @BindView(R.id.zhangdan_icon)
+    ImageView zhangdanIcon;
+    @BindView(R.id.zhangdan_name)
+    TextView zhangdanName;
+    @BindView(R.id.shebei_icon)
+    ImageView shebeiIcon;
+    @BindView(R.id.shebei_name)
+    TextView shebeiName;
 
     private Fragment fragment;
     private List<Fragment> fragmentList;
@@ -106,15 +120,40 @@ public class MainActivity extends BaseActivity {
             case R.id.bt_index_index:
                 currentIndex = 0;
                 showFragment();
+                indexName.setTextColor(getResources().getColor(R.color.appbar));
+                zhangdanName.setTextColor(getResources().getColor(R.color.index_text_normal));
+                shebeiName.setTextColor(getResources().getColor(R.color.index_text_normal));
+
+                indexIcon.setImageResource(R.mipmap.index_home_hover);
+                zhangdanIcon.setImageResource(R.mipmap.index_bill_nomal);
+                shebeiIcon.setImageResource(R.mipmap.index_equipment_nomal);
                 break;
             case R.id.bt_index_Zhangdan:
                 currentIndex = 1;
                 showFragment();
+
+                indexName.setTextColor(getResources().getColor(R.color.index_text_normal));
+                zhangdanName.setTextColor(getResources().getColor(R.color.appbar));
+                shebeiName.setTextColor(getResources().getColor(R.color.index_text_normal));
+
+                indexIcon.setImageResource(R.mipmap.index_home_nomal);
+                zhangdanIcon.setImageResource(R.mipmap.index_bill_hover);
+                shebeiIcon.setImageResource(R.mipmap.index_equipment_nomal);
                 break;
             case R.id.bt_index_Shebei:
                 currentIndex = 2;
                 showFragment();
+
+                indexName.setTextColor(getResources().getColor(R.color.index_text_normal));
+                zhangdanName.setTextColor(getResources().getColor(R.color.index_text_normal));
+                shebeiName.setTextColor(getResources().getColor(R.color.appbar));
+
+                indexIcon.setImageResource(R.mipmap.index_home_nomal);
+                zhangdanIcon.setImageResource(R.mipmap.index_bill_nomal);
+                shebeiIcon.setImageResource(R.mipmap.index_equipment_hover);
                 break;
         }
     }
+
+
 }
