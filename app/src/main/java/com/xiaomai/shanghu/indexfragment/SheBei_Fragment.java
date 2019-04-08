@@ -15,6 +15,7 @@ import com.xiaomai.shanghu.base.BaseFragment;
 import com.xiaomai.shanghu.filter.Filter_SheBeiActivity;
 import com.xiaomai.shanghu.frament_shebei.Fragment_LiXian;
 import com.xiaomai.shanghu.frament_shebei.Fragment_ZaiXian;
+import com.xiaomai.shanghu.freeze.FreezeActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -75,6 +76,7 @@ public class SheBei_Fragment extends BaseFragment {
                 toClass(getActivity(),Filter_SheBeiActivity.class);
                 break;
             case R.id.bt_shebei_dongjie:
+                toClass(getActivity(),FreezeActivity.class);
                 break;
         }
     }

@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.xiaomai.shanghu">
 
+    <uses-permission android:name="android.permission.INTERNET" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -22,7 +23,10 @@
         <activity android:name=".tixian.TiXianJiLuActivity" />
         <activity android:name=".tixian.TiXianShowActivity" />
         <activity android:name=".filter.Filter_TixianActivity" />
-        <activity android:name=".filter.Filter_SheBeiActivity"></activity>
+        <activity android:name=".filter.Filter_SheBeiActivity" />
+        <activity android:name=".details.SheBeiDetailsActivity" />
+        <activity android:name=".freeze.FreezeActivity" />
+        <activity android:name=".details.FreezeDetailsActivity"></activity>
     </application>
 
 </manifest>

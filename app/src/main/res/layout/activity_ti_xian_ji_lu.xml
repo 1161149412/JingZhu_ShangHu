@@ -44,6 +44,7 @@
     </RelativeLayout>
 
     <com.androidkun.xtablayout.XTabLayout
+        android:background="#fff"
         android:id="@+id/xtab"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dp_48"

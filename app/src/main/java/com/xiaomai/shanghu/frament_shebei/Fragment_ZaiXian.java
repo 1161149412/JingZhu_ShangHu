@@ -7,10 +7,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.xiaomai.shanghu.R;
 import com.xiaomai.shanghu.adapter.Adapter_Tixianzhong;
 import com.xiaomai.shanghu.adapter.Adapter_Zaixian;
 import com.xiaomai.shanghu.base.BaseFragment;
+import com.xiaomai.shanghu.details.SheBeiDetailsActivity;
 import com.xiaomai.shanghu.utils.SpacesItemDecoration;
 
 import java.util.ArrayList;
@@ -39,6 +41,12 @@ public class Fragment_ZaiXian extends BaseFragment {
         adapter=new Adapter_Zaixian(R.layout.item_shebei_zaixian,list);
         recycler.setAdapter(adapter);
         adapter.openLoadAnimation();
+        adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                toClass(view.getContext(),SheBeiDetailsActivity.class);
+            }
+        });
     }
 
     @Override

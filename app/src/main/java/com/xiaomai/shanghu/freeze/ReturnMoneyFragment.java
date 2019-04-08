@@ -1,4 +1,4 @@
-package com.xiaomai.shanghu.indexfragment;
+package com.xiaomai.shanghu.freeze;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -6,12 +6,12 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
+import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.xiaomai.shanghu.R;
-import com.xiaomai.shanghu.adapter.Adapter_Tixianzhong;
-import com.xiaomai.shanghu.adapter.Adapter_ZhangDan;
+import com.xiaomai.shanghu.adapter.Adapter_Freeze;
 import com.xiaomai.shanghu.base.BaseFragment;
+import com.xiaomai.shanghu.details.FreezeDetailsActivity;
 import com.xiaomai.shanghu.utils.SpacesItemDecoration;
 
 import java.util.ArrayList;
@@ -21,34 +21,35 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-public class ZhangDan_Fragment extends BaseFragment {
-    @BindView(R.id.tv_tixian_money)
-    TextView tvTixianMoney;
-    @BindView(R.id.tv_tixian_dongjie)
-    TextView tvTixianDongjie;
+public class ReturnMoneyFragment extends BaseFragment {
     @BindView(R.id.recycler)
     RecyclerView recycler;
     Unbinder unbinder;
-
     private List<String> list;
-    private Adapter_ZhangDan adapter;
-
+    private Adapter_Freeze adapter;
     @Override
     protected void initView(View view) {
         recycler.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false));
+        recycler.addItemDecoration(new SpacesItemDecoration(10));
         list = new ArrayList<>();
-        list.add("9527.00");
-        list.add("9528.00");
-        list.add("9528.00");
-        list.add("9528.00");
-        adapter = new Adapter_ZhangDan(R.layout.zhangdan_item, list);
+        list.add("3111");
+        list.add("3112");
+        list.add("3113");
+        adapter = new Adapter_Freeze(R.layout.item_freeze, list);
         recycler.setAdapter(adapter);
         adapter.openLoadAnimation();
+        adapter.setOnItemClickListener(new BaseQuickAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(BaseQuickAdapter adapter, View view, int position) {
+                toClass(view.getContext(),FreezeDetailsActivity.class);
+            }
+        });
     }
 
     @Override
     protected int getLayoutId() {
-        return R.layout.fragment_zhangdan;
+        return R.layout.freeze_fragment;
     }
+
 
 }

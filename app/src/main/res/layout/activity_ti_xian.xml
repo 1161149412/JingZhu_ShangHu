@@ -90,6 +90,8 @@
         android:layout_marginLeft="@dimen/dp_13"
         android:layout_marginTop="@dimen/dp_17"
         android:layout_marginRight="@dimen/dp_13"
+        android:background="@drawable/tixian_frame"
+        android:elevation="2dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
         android:visibility="gone">
@@ -137,6 +139,8 @@
         android:layout_marginLeft="@dimen/dp_13"
         android:layout_marginTop="@dimen/dp_17"
         android:layout_marginRight="@dimen/dp_13"
+        android:background="@drawable/tixian_frame"
+        android:elevation="2dp"
         android:gravity="center_vertical"
         android:orientation="horizontal">
 
@@ -174,7 +178,9 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_41"
+        android:layout_height="@dimen/dp_61"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:layout_marginLeft="@dimen/dp_13"
         android:layout_marginTop="@dimen/dp_23"
         android:layout_marginRight="@dimen/dp_13">
@@ -195,10 +201,11 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginLeft="@dimen/dp_21"
-            android:background="@null"
             android:text="56565"
+            android:singleLine="true"
             android:textColor="#363636"
-            android:textSize="@dimen/sp_38" />
+            android:textSize="@dimen/sp_38"
+            android:theme="@style/MyEditText" />
     </RelativeLayout>
 
     <LinearLayout
