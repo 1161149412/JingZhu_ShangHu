@@ -23,6 +23,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tv_sellerName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="兵哥豌豆面"
@@ -30,6 +31,7 @@
                 android:textSize="@dimen/sp_14" />
 
             <TextView
+                android:id="@+id/tv_user_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_10"
@@ -45,6 +47,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tv_device_id"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="JZCB0912720913008"
@@ -52,6 +55,7 @@
                 android:textSize="@dimen/sp_14" />
 
             <TextView
+                android:id="@+id/tv_installreal_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/dp_10"
@@ -63,6 +67,7 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#E6E6E6"
         android:layout_marginTop="@dimen/dp_13">
         <include layout="@layout/line_view"/>
 
@@ -107,6 +112,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tv_yjd_money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5678.66"
@@ -123,6 +129,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/tv_number"
             android:layout_width="@dimen/dp_43"
             android:layout_height="@dimen/dp_22"
             android:layout_gravity="center_vertical"

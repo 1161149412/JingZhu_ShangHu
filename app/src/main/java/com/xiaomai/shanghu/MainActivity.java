@@ -4,11 +4,13 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.xiaomai.shanghu.base.BaseActivity;
 import com.xiaomai.shanghu.indexfragment.Index_Fragment;
@@ -19,7 +21,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class MainActivity extends BaseActivity {
@@ -50,6 +51,7 @@ public class MainActivity extends BaseActivity {
     private int currentIndex = 0;
     private FragmentManager fragmentManager;
     private static final String CURRENT_FRAGMENT = "STATE_FRAGMENT_SHOW";
+    private long exitTime = 0;
 
     @Override
     public int getLayoutId() {
@@ -73,7 +75,6 @@ public class MainActivity extends BaseActivity {
             fragmentList.add(new ZhangDan_Fragment());
             fragmentList.add(new SheBei_Fragment());
             showFragment();
-
         }
     }
 
@@ -156,4 +157,23 @@ public class MainActivity extends BaseActivity {
     }
 
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            exit();
+            return false;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    public void exit() {
+        if ((System.currentTimeMillis() - exitTime) > 2000) {
+            Toast.makeText(getApplicationContext(), "再按一次退出程序",
+                    Toast.LENGTH_SHORT).show();
+            exitTime = System.currentTimeMillis();
+        } else {
+            finish();
+            System.exit(0);
+        }
+    }
 }

@@ -30,7 +30,7 @@
                 android:id="@+id/tv_tixian_money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="6,098.45"
+                android:text="0.00"
                 android:textColor="#fff"
                 android:textSize="@dimen/sp_18" />
 
@@ -60,7 +60,7 @@
                 android:id="@+id/tv_tixian_dongjie"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="47,098.45"
+                android:text="0.00"
                 android:textColor="#fff"
                 android:textSize="@dimen/sp_18" />
 
@@ -74,8 +74,15 @@
         </LinearLayout>
     </LinearLayout>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
 </LinearLayout>

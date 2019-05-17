@@ -25,7 +25,7 @@ public class Adapter_Filter extends BaseQuickAdapter<String,BaseViewHolder> {
             helper.setTextColor(R.id.item_filter_type_name, Color.parseColor("#FFFFFF"));
         }else {
             //未选中
-            helper.setBackgroundRes(R.id.item_filter_type_name, 0);
+            helper.setBackgroundRes(R.id.item_filter_type_name, R.drawable.filter_button_no);
             helper.setTextColor(R.id.item_filter_type_name, Color.parseColor("#363636"));
         }
     }

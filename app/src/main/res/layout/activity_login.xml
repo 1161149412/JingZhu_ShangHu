@@ -36,26 +36,22 @@
                 android:src="@mipmap/login_phone" />
 
             <EditText
+                android:id="@+id/et_index_tel"
                 android:layout_width="@dimen/dp_260"
                 android:layout_height="@dimen/dp_57"
                 android:layout_marginLeft="@dimen/dp_10"
                 android:layout_toRightOf="@+id/login_icon"
-                android:background="@null"
-                android:hint="输入代理商手机号"
+                android:hint="请输入商户手机号"
                 android:inputType="number"
                 android:maxLength="11"
                 android:singleLine="true"
-                android:textColor="#ACACAC"
+                android:textColor="#363636"
                 android:textColorHint="#ACACAC"
-                android:textSize="@dimen/sp_14" />
+                android:textCursorDrawable="@drawable/edittext_bg"
+                android:textSize="@dimen/sp_14"
+                android:theme="@style/MyEditText" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_1"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="@dimen/dp_10"
-                android:layout_toRightOf="@+id/login_icon"
-                android:background="#FF5603" />
+
         </RelativeLayout>
 
 
@@ -72,28 +68,24 @@
                 android:src="@mipmap/login_code" />
 
             <EditText
+                android:id="@+id/et_index_code"
                 android:layout_width="@dimen/dp_260"
                 android:layout_height="@dimen/dp_57"
                 android:layout_marginLeft="@dimen/dp_10"
                 android:layout_toRightOf="@+id/login_icon1"
-                android:background="@null"
+                android:textCursorDrawable="@drawable/edittext_bg"
                 android:hint="输入验证码"
                 android:inputType="number"
                 android:maxLength="6"
                 android:singleLine="true"
-                android:textColor="#ACACAC"
+                android:textColor="#363636"
                 android:textColorHint="#ACACAC"
-                android:textSize="@dimen/sp_14" />
+                android:textSize="@dimen/sp_14"
+                android:theme="@style/MyEditText" />
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_1"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="@dimen/dp_10"
-                android:layout_toRightOf="@+id/login_icon1"
-                android:background="#FF5603" />
 
             <TextView
+                android:id="@+id/bt_index_getcode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -104,7 +96,7 @@
         </RelativeLayout>
     </LinearLayout>
 
-    <TextView
+    <Button
         android:id="@+id/bt_login"
         android:layout_width="@dimen/dp_260"
         android:layout_height="@dimen/dp_44"

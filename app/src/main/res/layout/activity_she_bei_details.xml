@@ -80,9 +80,10 @@
                         android:textSize="@dimen/sp_15" />
 
                     <TextView
+                        android:id="@+id/tv_shebei_bianghao"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="DASD1231312"
+                        android:text=""
                         android:textColor="#363636"
                         android:textSize="@dimen/sp_15" />
                 </LinearLayout>
@@ -103,14 +104,16 @@
                         android:textSize="@dimen/sp_15" />
 
                     <TextView
+                        android:id="@+id/tv_Latitude_and_longitude"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="363.2"
+                        android:text=""
                         android:textColor="#363636"
                         android:textSize="@dimen/sp_15" />
                 </LinearLayout>
 
                 <LinearLayout
+                    android:visibility="gone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/dp_25"
@@ -126,6 +129,7 @@
                         android:textSize="@dimen/sp_15" />
 
                     <TextView
+                        android:id="@+id/tv_suozai_diqu"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="成都"
@@ -149,9 +153,10 @@
                         android:textSize="@dimen/sp_15" />
 
                     <TextView
+                        android:id="@+id/tv_address"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="赵信国际"
+                        android:text=""
                         android:textColor="#363636"
                         android:textSize="@dimen/sp_15" />
                 </LinearLayout>
@@ -172,9 +177,10 @@
                         android:textSize="@dimen/sp_15" />
 
                     <TextView
+                        android:id="@+id/tv_price"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1元/小时"
+                        android:text=""
                         android:textColor="#363636"
                         android:textSize="@dimen/sp_15" />
                 </LinearLayout>
@@ -195,9 +201,10 @@
                         android:textSize="@dimen/sp_15" />
 
                     <TextView
+                        android:id="@+id/tv_slot"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="6槽"
+                        android:text=""
                         android:textColor="#363636"
                         android:textSize="@dimen/sp_15" />
                 </LinearLayout>
@@ -218,9 +225,10 @@
                         android:textSize="@dimen/sp_15" />
 
                     <TextView
+                        android:id="@+id/tv_fengcheng"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="10%"
+                        android:text=""
                         android:textColor="#363636"
                         android:textSize="@dimen/sp_15" />
                 </LinearLayout>
@@ -241,9 +249,10 @@
                         android:textSize="@dimen/sp_15" />
 
                     <TextView
+                        android:id="@+id/tv_dongjie_jine"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="800元"
+                        android:text=""
                         android:textColor="#363636"
                         android:textSize="@dimen/sp_15" />
                 </LinearLayout>
@@ -265,9 +274,10 @@
                         android:textSize="@dimen/sp_15" />
 
                     <TextView
+                        android:id="@+id/tv_yjiedong"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="20元"
+                        android:text=""
                         android:textColor="#363636"
                         android:textSize="@dimen/sp_15" />
                 </LinearLayout>
@@ -322,9 +332,10 @@
                         android:textSize="@dimen/sp_15" />
 
                     <TextView
+                        android:id="@+id/tv_shanghu_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="兵哥豌豆面"
+                        android:text=""
                         android:textColor="#363636"
                         android:textSize="@dimen/sp_15" />
                 </LinearLayout>
@@ -345,9 +356,10 @@
                         android:textSize="@dimen/sp_15" />
 
                     <TextView
+                        android:id="@+id/tv_lxr"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="张三"
+                        android:text=""
                         android:textColor="#363636"
                         android:textSize="@dimen/sp_15" />
                 </LinearLayout>
@@ -368,9 +380,10 @@
                         android:textSize="@dimen/sp_15" />
 
                     <TextView
+                        android:id="@+id/tv_liangxi_fangshi"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="13698536425"
+                        android:text=""
                         android:textColor="#363636"
                         android:textSize="@dimen/sp_15" />
                 </LinearLayout>
@@ -392,9 +405,10 @@
                         android:textSize="@dimen/sp_15" />
 
                     <TextView
+                        android:id="@+id/tv_bangding_shijian"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2015-09-09"
+                        android:text=""
                         android:textColor="#363636"
                         android:textSize="@dimen/sp_15" />
                 </LinearLayout>
@@ -405,8 +419,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/dp_12"
-                android:layout_marginTop="@dimen/dp_9"
                 android:layout_marginRight="@dimen/dp_13"
+                android:layout_marginTop="@dimen/dp_9"
                 android:background="@drawable/index_frame"
                 android:elevation="2dp"
                 android:orientation="vertical">
@@ -449,9 +463,10 @@
                         android:textSize="@dimen/sp_15" />
 
                     <TextView
+                        android:id="@+id/tv_anzhuang_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="周杰伦"
+                        android:text=""
                         android:textColor="#363636"
                         android:textSize="@dimen/sp_15" />
                 </LinearLayout>
@@ -472,32 +487,10 @@
                         android:textSize="@dimen/sp_15" />
 
                     <TextView
+                        android:id="@+id/tv_anzhuang_lxr"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="156985398545"
-                        android:textColor="#363636"
-                        android:textSize="@dimen/sp_15" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/dp_25"
-                    android:layout_marginTop="@dimen/dp_12"
-                    android:gravity="center_vertical"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="安装时间："
-                        android:textColor="#363636"
-                        android:textSize="@dimen/sp_15" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="2018-06-03"
+                        android:text=""
                         android:textColor="#363636"
                         android:textSize="@dimen/sp_15" />
                 </LinearLayout>
@@ -514,14 +507,41 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="安装时间："
+                        android:textColor="#363636"
+                        android:textSize="@dimen/sp_15" />
+
+                    <TextView
+                        android:id="@+id/tv_anzhuang_sj"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textColor="#363636"
+                        android:textSize="@dimen/sp_15" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:layout_marginLeft="@dimen/dp_25"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="绑定时间："
                         android:textColor="#363636"
                         android:textSize="@dimen/sp_15" />
 
                     <TextView
+                        android:id="@+id/tv_anzhuang_bangding_sj"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="2015-09-09"
+                        android:text=""
                         android:textColor="#363636"
                         android:textSize="@dimen/sp_15" />
                 </LinearLayout>
@@ -577,12 +597,14 @@
                         android:textSize="@dimen/sp_15" />
 
                     <ImageView
+                        android:id="@+id/img_lixian"
                         android:layout_width="@dimen/dp_7"
                         android:layout_height="@dimen/dp_7"
                         android:layout_marginLeft="@dimen/dp_9"
                         android:src="@mipmap/red_sign_icon" />
 
                     <TextView
+                        android:id="@+id/tv_lixian"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/dp_9"
@@ -591,12 +613,14 @@
                         android:textSize="@dimen/sp_15" />
 
                     <ImageView
+                        android:id="@+id/img_zaixian"
                         android:layout_width="@dimen/dp_7"
                         android:layout_height="@dimen/dp_7"
                         android:layout_marginLeft="@dimen/dp_25"
                         android:src="@mipmap/green_sign_icon" />
 
                     <TextView
+                        android:id="@+id/tv_zaixian"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/dp_9"
@@ -605,6 +629,7 @@
                         android:textSize="@dimen/sp_15" />
 
                     <TextView
+                        android:id="@+id/tv_lixian_time"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/dp_44"
@@ -644,7 +669,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/dp_4"
-                        android:text="盈利情况"
+                        android:text="订单情况"
                         android:textColor="#363636"
                         android:textSize="@dimen/sp_14" />
                 </LinearLayout>
@@ -666,14 +691,15 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/dp_8"
-                        android:text="累计盈利金额："
+                        android:text="累计订单金额："
                         android:textColor="#363636"
                         android:textSize="@dimen/sp_15" />
 
                     <TextView
+                        android:id="@+id/tv_zong_yingli"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="500"
+                        android:text="0.00"
                         android:textColor="#FF5603"
                         android:textSize="@dimen/sp_15" />
 
@@ -683,7 +709,6 @@
                         android:text="元"
                         android:textColor="#363636"
                         android:textSize="@dimen/sp_15" />
-
 
                 </LinearLayout>
 
@@ -704,14 +729,91 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/dp_8"
-                        android:text="本月盈利金额："
+                        android:text="本月订单金额："
                         android:textColor="#363636"
+                        android:textSize="@dimen/sp_15" />
+
+                    <TextView
+                        android:id="@+id/tv_ben_yue_yinli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textColor="#000"
                         android:textSize="@dimen/sp_15" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="300"
+                        android:text="元"
+                        android:textColor="#363636"
+                        android:textSize="@dimen/sp_15" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_25"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_7"
+                        android:layout_height="@dimen/dp_7"
+                        android:src="@mipmap/orange_sign_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:text="月均订单金额："
+                        android:textColor="#363636"
+                        android:textSize="@dimen/sp_15" />
+
+                    <TextView
+                        android:id="@+id/tv_yue_pingju_yingli"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
+                        android:textColor="#000"
+                        android:textSize="@dimen/sp_15" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="元"
+                        android:textColor="#363636"
+                        android:textSize="@dimen/sp_15" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_25"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_7"
+                        android:layout_height="@dimen/dp_7"
+                        android:src="@mipmap/orange_sign_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_8"
+                        android:text="为我赚取："
+                        android:textColor="#363636"
+                        android:textSize="@dimen/sp_15" />
+
+                    <TextView
+                        android:id="@+id/tv_wei_wo_zhuang_qu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0.00"
                         android:textColor="#FF5603"
                         android:textSize="@dimen/sp_15" />
 
@@ -722,15 +824,14 @@
                         android:textColor="#363636"
                         android:textSize="@dimen/sp_15" />
 
-
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="@dimen/dp_25"
-                    android:layout_marginTop="@dimen/dp_12"
                     android:layout_marginBottom="@dimen/dp_20"
+                    android:layout_marginLeft="@dimen/dp_25"
+                    android:layout_marginTop="@dimen/dp_12"
                     android:gravity="center_vertical"
                     android:orientation="horizontal">
 
@@ -743,21 +844,22 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/dp_8"
-                        android:text="月均盈利金额："
+                        android:text="订单总量："
                         android:textColor="#363636"
                         android:textSize="@dimen/sp_15" />
 
                     <TextView
+                        android:id="@+id/tv_all"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="400"
-                        android:textColor="#FF5603"
+                        android:text="0.00"
+                        android:textColor="#000"
                         android:textSize="@dimen/sp_15" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="元"
+                        android:text="笔"
                         android:textColor="#363636"
                         android:textSize="@dimen/sp_15" />
 

@@ -21,7 +21,7 @@
 
         <TextView
             style="@style/titletext"
-            android:text="筛选" />
+            android:text="提现筛选" />
 
     </RelativeLayout>
 
@@ -30,75 +30,24 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dp_12"
         android:layout_marginTop="@dimen/dp_22"
-        android:text="申请日期:"
+        android:text="状态:"
         android:textColor="#707070"
         android:textSize="@dimen/sp_14" />
 
-    <TextView
-        android:id="@+id/filter_time"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_54"
-        android:layout_marginLeft="@dimen/dp_21"
-        android:gravity="center_vertical"
-        android:text="2019-02-28"
-        android:textColor="#363636"
-        android:textSize="@dimen/sp_16" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dp_12"
-        android:text="提现金额:"
-        android:textColor="#707070"
-        android:textSize="@dimen/sp_14" />
-
-    <LinearLayout
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="@dimen/dp_48"
-        android:layout_marginTop="@dimen/dp_15"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:layout_marginLeft="@dimen/dp_20"
+        android:layout_marginRight="@dimen/dp_20"
+        android:layout_marginTop="@dimen/dp_20" />
 
-        <EditText
-            android:layout_width="@dimen/dp_120"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:hint="输入最低金额"
-            android:inputType="number"
-            android:singleLine="true"
-            android:textColor="#363636"
-            android:textColorHint="#B6B6B6"
-            android:textSize="@dimen/sp_14"
-            android:theme="@style/MyEditText" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/dp_10"
-            android:gravity="center_vertical"
-            android:text="至"
-            android:textColor="#363636"
-            android:textSize="@dimen/sp_16" />
-
-        <EditText
-            android:layout_width="@dimen/dp_120"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:hint="输入最高金额"
-            android:inputType="number"
-            android:singleLine="true"
-            android:textColor="#363636"
-            android:textColorHint="#B6B6B6"
-            android:textSize="@dimen/sp_14"
-            android:theme="@style/MyEditText" />
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="@dimen/dp_260"
         android:layout_height="@dimen/dp_44"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/dp_280"
+        android:layout_marginTop="@dimen/dp_360"
         android:orientation="horizontal">
 
         <TextView

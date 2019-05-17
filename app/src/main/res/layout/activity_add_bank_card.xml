@@ -23,8 +23,9 @@
 
 
         <TextView
+            android:id="@+id/tv_title"
             style="@style/titletext"
-            android:text="提现申请"
+            android:text="添加银行卡"
             android:textColor="#363636" />
     </RelativeLayout>
 
@@ -50,16 +51,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="持卡人"
+                android:text="账户名称"
                 android:textColor="#363636"
                 android:textSize="@dimen/sp_15" />
 
             <EditText
+                android:id="@+id/edit_put_name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/dp_16"
                 android:background="@null"
-                android:hint="输入持卡人姓名"
+                android:hint="输入个人/企业账户名称"
                 android:singleLine="true"
                 android:textColor="#363636"
                 android:textColorHint="#868686"
@@ -82,6 +84,7 @@
                 android:textSize="@dimen/sp_15" />
 
             <EditText
+                android:id="@+id/edit_put_kaihu_back_name"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/dp_16"
@@ -109,11 +112,13 @@
                 android:textSize="@dimen/sp_15" />
 
             <EditText
+                android:id="@+id/edit_put_back_card"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/dp_16"
                 android:background="@null"
                 android:hint="请输入银行卡号"
+                android:inputType="number"
                 android:singleLine="true"
                 android:textColor="#363636"
                 android:textColorHint="#868686"
@@ -136,11 +141,14 @@
                 android:textSize="@dimen/sp_15" />
 
             <EditText
+                android:id="@+id/edit_put_phone"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="@dimen/dp_16"
                 android:background="@null"
                 android:hint="请输入银行卡预留手机号"
+                android:inputType="number"
+                android:maxLength="11"
                 android:singleLine="true"
                 android:textColor="#363636"
                 android:textColorHint="#868686"

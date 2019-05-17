@@ -21,7 +21,7 @@
 
         <TextView
             style="@style/titletext"
-            android:text="提现记录" />
+            android:text="提现申请记录" />
 
         <TextView
             android:id="@+id/bt_filter"
@@ -44,6 +44,7 @@
     </RelativeLayout>
 
     <com.androidkun.xtablayout.XTabLayout
+        android:visibility="gone"
         android:background="#fff"
         android:id="@+id/xtab"
         android:layout_width="match_parent"
@@ -60,7 +61,22 @@
 
 
     <android.support.v4.view.ViewPager
+        android:visibility="gone"
         android:id="@+id/viewpage"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
 </LinearLayout>

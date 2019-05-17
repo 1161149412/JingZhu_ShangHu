@@ -29,7 +29,18 @@
         <item name="android:src">@mipmap/back_write</item>
     </style>
     <style name="MyEditText" >
-        <item name="colorControlNormal">@android:color/darker_gray</item>
+        <item name="colorControlNormal">@android:color/holo_orange_dark</item>
         <item name="colorControlActivated">@android:color/holo_orange_dark</item>
     </style>
+
+    <style name="EditText_Styles_No" >
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@android:color/holo_orange_dark</item>
+    </style>
+
+    <style name="styleSplashImage" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@mipmap/startup_page</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
 </resources>

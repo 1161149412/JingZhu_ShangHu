@@ -3,30 +3,53 @@
     package="com.xiaomai.shanghu">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
+        android:name=".App"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/app_icon_180"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/app_icon_180"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
-        <activity android:name=".LoginActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".LoginActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".tixian.TiXianActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".tixian.AddBankCardActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".tixian.TiXianJiLuActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".tixian.TiXianShowActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".filter.Filter_TixianActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".filter.Filter_SheBeiActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".details.SheBeiDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".freeze.FreezeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".details.FreezeDetailsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".tixian.PersonalInformationaActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".tixian.EditProfileActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".filter.Filter_Freeze_SheBeiActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".WelcomeActivity"
+            android:theme="@style/styleSplashImage"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".tixian.TiXianActivity" />
-        <activity android:name=".tixian.AddBankCardActivity" />
-        <activity android:name=".tixian.TiXianJiLuActivity" />
-        <activity android:name=".tixian.TiXianShowActivity" />
-        <activity android:name=".filter.Filter_TixianActivity" />
-        <activity android:name=".filter.Filter_SheBeiActivity" />
-        <activity android:name=".details.SheBeiDetailsActivity" />
-        <activity android:name=".freeze.FreezeActivity" />
-        <activity android:name=".details.FreezeDetailsActivity"></activity>
     </application>
 
 </manifest>
