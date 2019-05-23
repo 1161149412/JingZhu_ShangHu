@@ -47,7 +47,7 @@
             android:layout_width="@dimen/dp_1"
             android:layout_height="@dimen/dp_32"
             android:layout_gravity="center"
-            android:background="#C6C6C6" />
+            android:background="#80DEDEDE" />
 
         <LinearLayout
             android:layout_width="match_parent"

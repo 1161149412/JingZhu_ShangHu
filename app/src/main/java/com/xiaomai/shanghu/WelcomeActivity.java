@@ -3,21 +3,11 @@ package com.xiaomai.shanghu;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Handler;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.widget.Toast;
 
 import com.gyf.barlibrary.ImmersionBar;
-import com.uber.autodispose.AutoDispose;
-import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider;
 import com.xiaomai.shanghu.base.BaseActivity;
-import com.xiaomai.shanghu.bean.GetCodeBean;
-import com.xiaomai.shanghu.net.RetrofitClient;
-import com.xiaomai.shanghu.utils.ToastUtil;
-
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.functions.Consumer;
-import io.reactivex.schedulers.Schedulers;
 
 public class WelcomeActivity extends BaseActivity {
 
@@ -79,30 +69,5 @@ public class WelcomeActivity extends BaseActivity {
         }
     }
 
-
-    //获取验证码
-    private void getData(String mobile) {
-        RetrofitClient.getInstance().getApi_login().getCaptchaTest(mobile)
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .as(AutoDispose.<GetCodeBean>autoDisposable(AndroidLifecycleScopeProvider.from(this)))
-                .subscribe(new Consumer<GetCodeBean>() {
-                    @Override
-                    public void accept(GetCodeBean bean) throws Exception {
-                        if (bean.getCode()==1){
-                            ToastUtil.showShortToast("发送成功");
-                        }else if(bean.getCode()==-1){
-                            ToastUtil.showShortToast("您还不是商户");
-                        }
-                        Log.d("tag", "请求成功");
-
-                    }
-                }, new Consumer<Throwable>() {
-                    @Override
-                    public void accept(Throwable throwable) throws Exception {
-                        Log.d("tag", "请求错误");
-                    }
-                });
-    }
 
 }

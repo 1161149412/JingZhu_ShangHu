@@ -33,7 +33,7 @@ public class Adapter_Withdrawals_Record extends BaseQuickAdapter<DepositsBean.Da
 
         helper.setText(R.id.item_banktype,item.getBank());
         helper.setText(R.id.item_money,item.getMoney());
-        helper.setText(R.id.item_time,StringToIntUtils.stringSubString(item.getApplyTime()));
+        helper.setText(R.id.item_time,item.getApplyTime());
 
         if (!TextUtils.isEmpty(str) && str.length()>=4){
             helper.setText(R.id.item_bankid,"尾号("+str.substring(str.length()-4,str.length())+")"+item.getRealName());

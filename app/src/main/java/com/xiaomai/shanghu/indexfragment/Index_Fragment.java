@@ -1,5 +1,6 @@
 package com.xiaomai.shanghu.indexfragment;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.Intent;
@@ -14,9 +15,13 @@ import android.widget.TextView;
 
 import com.uber.autodispose.AutoDispose;
 import com.uber.autodispose.android.lifecycle.AndroidLifecycleScopeProvider;
+import com.vector.update_app.UpdateAppBean;
+import com.vector.update_app.UpdateAppManager;
+import com.vector.update_app.UpdateCallback;
 import com.xiaomai.shanghu.LoginActivity;
 import com.xiaomai.shanghu.R;
 import com.xiaomai.shanghu.base.BaseFragment;
+import com.xiaomai.shanghu.bean.AppUpdateBean;
 import com.xiaomai.shanghu.bean.GetCodeBean;
 import com.xiaomai.shanghu.bean.IndexBean;
 import com.xiaomai.shanghu.net.RetrofitClient;
@@ -24,9 +29,14 @@ import com.xiaomai.shanghu.tixian.PersonalInformationaActivity;
 import com.xiaomai.shanghu.tixian.TiXianActivity;
 import com.xiaomai.shanghu.tixian.TiXianJiLuActivity;
 import com.xiaomai.shanghu.utils.AddDefaultScreenAreaUtils;
+import com.xiaomai.shanghu.utils.AppUtils;
 import com.xiaomai.shanghu.utils.DialogUtils;
 import com.xiaomai.shanghu.utils.StringToIntUtils;
 import com.xiaomai.shanghu.utils.ToastUtil;
+import com.xiaomai.shanghu.utils.UpdateAppHttpUtil;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -71,15 +81,20 @@ public class Index_Fragment extends BaseFragment {
     Button btn_callPhone;
 
     private SharedPreferences usertoken;
-    private String token;
+    private String token,appServerVersionCode;
     private Dialog dialog;
+    private int appLocalVersionCode;
     @Override
     protected void initView(View view) {
         AddDefaultScreenAreaUtils.addDefaultScreenArea(personal_information,10,10,10,10);
         usertoken= getActivity().getSharedPreferences("mytoken", 0);
         token = usertoken.getString("token","0");
+        appLocalVersionCode = AppUtils.getLocationCode(getActivity());//获取当前版本号
         dialog = DialogUtils.showDialog_progressbar(getContext());
+
         getData();
+
+        appUpdate();
     }
 
     @Override
@@ -182,6 +197,79 @@ public class Index_Fragment extends BaseFragment {
                                }
                            }
                 );
+    }
+
+
+    /**
+     * APP更新
+     * */
+    private void appUpdate(){
+        RetrofitClient.getInstance().getApi_AppUpdate().appUpdata("2")
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .as(AutoDispose.<AppUpdateBean>autoDisposable(AndroidLifecycleScopeProvider.from(this)))
+                .subscribe(new Consumer<AppUpdateBean>() {
+                               @Override
+                               public void accept(AppUpdateBean appUpdateBean) throws Exception {
+                                    appServerVersionCode = appUpdateBean.getNewVersion();
+
+                                   Log.d("更新", "APP版本："+appLocalVersionCode+"  服务器版本："+appServerVersionCode);
+                                   /**
+                                    * 更新操作
+                                    * */
+                                   if(appLocalVersionCode < Integer.parseInt(appServerVersionCode)){
+                                       appUpdateOperating(getActivity());
+                                   }
+
+                               }
+                           }, new Consumer<Throwable>() {
+                               @Override
+                               public void accept(Throwable throwable) throws Exception {
+                                   Log.d("更新", "APP更新"+throwable);
+                               }
+                           }
+                );
+    }
+
+    /**
+     * APP更新操作
+     * */
+
+    private void appUpdateOperating(Activity activity){
+        new UpdateAppManager.Builder()
+                .setActivity(activity)
+                .setUpdateUrl("http://192.168.0.81:8080/agentCenter/account/version/update?type=2")
+                .setHttpManager(new UpdateAppHttpUtil())
+                .setTopPic(R.mipmap.top_8)
+                .build()
+                .checkNewApp(new UpdateCallback() {
+                    @Override
+                    protected UpdateAppBean parseJson(String json) {
+                        UpdateAppBean updateAppBean = new UpdateAppBean();
+                        try {
+                            JSONObject jsonObject = new JSONObject(json);
+                            updateAppBean
+                                    //（必须）是否更新Yes,No
+                                    .setUpdate(jsonObject.optString("udate"))
+                                    //（必须）新版本号，
+                                    .setNewVersion(jsonObject.optString("newVersion"))
+                                    //（必须）下载地址
+                                    .setApkFileUrl(jsonObject.optString("apkFileUrl"))
+                                    //（必须）更新内容
+                                    .setUpdateLog(jsonObject.optString("updateLog"))
+                                    //大小，不设置不显示大小，可以不设置
+                                    .setTargetSize(jsonObject.optString("targetSize"))
+                                    //是否强制更新，可以不设置constraint
+                                    .setConstraint(jsonObject.optBoolean("cons"))
+                                    //设置md5，可以不设置
+                                    .setNewMd5(jsonObject.optString("newMd5"));
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                        return updateAppBean;
+                    }
+
+                });
     }
 
     /**

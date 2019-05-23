@@ -98,6 +98,7 @@ public class Filter_SheBeiActivity extends BaseActivity {
             case R.id.filter_bt_reset:
                 edit_put_shebe_id.setText("");
                 adapter.setSelectItem(0);
+                slot ="";
                 adapter.notifyDataSetChanged();
                 break;
             case R.id.filter_bt_submit:

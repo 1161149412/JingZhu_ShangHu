@@ -1,6 +1,7 @@
 package com.xiaomai.shanghu.net;
 
 
+import com.xiaomai.shanghu.bean.AppUpdateBean;
 import com.xiaomai.shanghu.bean.DepositsBean;
 import com.xiaomai.shanghu.bean.DeviceFreezeListBean;
 import com.xiaomai.shanghu.bean.GetBalanceBean;
@@ -128,4 +129,9 @@ public interface APIService {
     //TODO 获取商家提现中金额和可提现金额
     @GET("seller/account/getBalance")
     Observable<GetBalanceBean> getBalance();
+
+    //TODO APP更新
+    @GET("agentCenter/account/version/update")
+    Observable<AppUpdateBean> appUpdata(@Query("type") String type);
+
 }

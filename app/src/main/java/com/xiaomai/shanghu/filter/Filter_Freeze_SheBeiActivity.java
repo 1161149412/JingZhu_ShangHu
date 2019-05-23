@@ -49,6 +49,8 @@ public class Filter_Freeze_SheBeiActivity extends BaseActivity {
         filter_freeze = getSharedPreferences("filter_freeze", 0);
         editor_freeze = filter_freeze.edit();
 
+        slot = "";
+
         recycler.setLayoutManager(new GridLayoutManager(this, 4, GridLayoutManager.VERTICAL, false));
         list = new ArrayList<>();
         list.add("全部");
@@ -89,6 +91,7 @@ public class Filter_Freeze_SheBeiActivity extends BaseActivity {
                 filter_freeze.edit().clear().commit();
                 edit_put_shebe_id.setText("");
                 adapter.setSelectItem(0);
+                slot = "";
                 adapter.notifyDataSetChanged();
                 break;
             case R.id.filter_bt_submit:
@@ -97,7 +100,6 @@ public class Filter_Freeze_SheBeiActivity extends BaseActivity {
                 editor_freeze.putString("deviceId",str);
                 editor_freeze.putString("slot",slot);
                 editor_freeze.commit();
-
                 finish();
                 break;
         }

@@ -1,5 +1,6 @@
 package com.xiaomai.shanghu;
 
+import android.app.Dialog;
 import android.content.SharedPreferences;
 import android.text.TextUtils;
 import android.util.Log;
@@ -18,6 +19,7 @@ import com.xiaomai.shanghu.bean.GetCodeBean;
 import com.xiaomai.shanghu.bean.UserLoginBean;
 import com.xiaomai.shanghu.net.RetrofitClient;
 import com.xiaomai.shanghu.utils.CountDownTimerUtils;
+import com.xiaomai.shanghu.utils.DialogUtils;
 import com.xiaomai.shanghu.utils.ToastUtil;
 
 import java.util.HashMap;
@@ -49,6 +51,7 @@ public class LoginActivity extends BaseActivity {
 
     private SharedPreferences usertoken,userTel;
     private SharedPreferences.Editor editor,editorTel;
+    private Dialog dialog;
 
     @Override
     public int getLayoutId() {
@@ -68,6 +71,7 @@ public class LoginActivity extends BaseActivity {
 
     //获取验证码
     private void getData(String mobile) {
+        dialog = DialogUtils.showDialog_progressbar(this);
                 RetrofitClient.getInstance().getApi_login().getCaptchaTest(mobile)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
@@ -83,11 +87,13 @@ public class LoginActivity extends BaseActivity {
                             ToastUtil.showShortToast("您还不是商户");
                         }
                         Log.d("tag", "请求成功");
+                        DialogUtils.closeDialog(dialog);
 
                     }
                 }, new Consumer<Throwable>() {
                     @Override
                     public void accept(Throwable throwable) throws Exception {
+                        DialogUtils.closeDialog(dialog);
                         Log.d("tag", "请求错误");
                     }
                 });
@@ -95,7 +101,6 @@ public class LoginActivity extends BaseActivity {
 
     //登录
     private void getUserInfo() {
-
         Map<String,String> params = new HashMap<String,String>();
         params.put("captcha",strCode);
         params.put("mobile",strTel);

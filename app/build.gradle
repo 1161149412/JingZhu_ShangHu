@@ -68,4 +68,9 @@ dependencies {
     implementation 'com.github.jarryleo:SingleClick:v1.8.3'
 
     implementation 'com.uber.autodispose:autodispose-android-archcomponents:1.0.0-RC2'
+
+    //版本更新
+    implementation 'com.qianwen:update-app:3.5.2'
+    implementation 'com.qianwen:okhttp-utils:3.8.0'
+    implementation 'com.lzy.net:okgo:3.0.4'
 }
