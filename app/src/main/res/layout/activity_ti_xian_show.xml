@@ -15,7 +15,8 @@
             android:layout_width="@dimen/dp_30"
             android:layout_height="match_parent">
 
-            <ImageView style="@style/titleback" />
+            <ImageView style="@style/titleback"
+                android:visibility="gone"/>
         </RelativeLayout>
 
 

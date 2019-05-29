@@ -1,5 +1,6 @@
 package com.xiaomai.shanghu.indexfragment;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -11,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.uber.autodispose.AutoDispose;
@@ -24,6 +26,7 @@ import com.xiaomai.shanghu.base.BaseFragment;
 import com.xiaomai.shanghu.bean.AppUpdateBean;
 import com.xiaomai.shanghu.bean.GetCodeBean;
 import com.xiaomai.shanghu.bean.IndexBean;
+import com.xiaomai.shanghu.freeze.FreezeActivity;
 import com.xiaomai.shanghu.net.RetrofitClient;
 import com.xiaomai.shanghu.tixian.PersonalInformationaActivity;
 import com.xiaomai.shanghu.tixian.TiXianActivity;
@@ -34,6 +37,7 @@ import com.xiaomai.shanghu.utils.DialogUtils;
 import com.xiaomai.shanghu.utils.StringToIntUtils;
 import com.xiaomai.shanghu.utils.ToastUtil;
 import com.xiaomai.shanghu.utils.UpdateAppHttpUtil;
+import com.xiaomai.shanghu.vipconfig.VipConfigActivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -75,10 +79,20 @@ public class Index_Fragment extends BaseFragment {
     TextView offLine;
     @BindView(R.id.on_line)
     TextView onLine;
+    @BindView(R.id.index_device_allcount)
+    TextView index_device_allcount;
     @BindView(R.id.personal_information)
     ImageView personal_information;
     @BindView(R.id.btn_callPhone)
     Button btn_callPhone;
+    @BindView(R.id.bt_index_my_bill)
+    LinearLayout bt_index_my_bill;
+    @BindView(R.id.bt_index_vip_deploy)
+    LinearLayout bt_index_vip_deploy;
+    @BindView(R.id.bt_index_freeze_device)
+    LinearLayout bt_index_freeze_device;
+    @BindView(R.id.bt_index_personal_information)
+    LinearLayout bt_index_personal_information;
 
     private SharedPreferences usertoken;
     private String token,appServerVersionCode;
@@ -93,7 +107,6 @@ public class Index_Fragment extends BaseFragment {
         dialog = DialogUtils.showDialog_progressbar(getContext());
 
         getData();
-
         appUpdate();
     }
 
@@ -102,7 +115,8 @@ public class Index_Fragment extends BaseFragment {
         return R.layout.fragment_index;
     }
 
-    @OnClick({R.id.bt_index_tixian, R.id.bt_index_jilu, R.id.bt_index_zhuxiao,R.id.personal_information,R.id.btn_callPhone})
+    @SuppressLint("ResourceType")
+    @OnClick({R.id.bt_index_tixian, R.id.bt_index_jilu,R.id.personal_information,R.id.btn_callPhone,R.id.bt_index_my_bill,R.id.bt_index_vip_deploy,R.id.bt_index_freeze_device,R.id.bt_index_personal_information})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.bt_index_tixian:
@@ -111,19 +125,25 @@ public class Index_Fragment extends BaseFragment {
                 break;
             case R.id.bt_index_jilu:
                 //提现记录
-                toClass(getActivity(), TiXianJiLuActivity.class);
                 break;
-            case R.id.bt_index_zhuxiao:
-                //注销
-                confirmOutLoginDialog();
-                break;
-            case R.id.personal_information:
-                //个人资料
-                toClass(getActivity(), PersonalInformationaActivity.class);
+            case R.id.personal_information: //注销
+                confirmOutLoginDialog();//注销
                 break;
             case R.id.btn_callPhone:
                 //拨打电话
                 callPhone("02886666869");
+                break;
+            case R.id.bt_index_my_bill://提现记录
+                toClass(getActivity(), TiXianJiLuActivity.class);
+                break;
+            case R.id.bt_index_vip_deploy://vip配置
+                toClass(getActivity(), VipConfigActivity.class);
+                break;
+            case R.id.bt_index_freeze_device://冻结设备
+                toClass(getActivity(),FreezeActivity.class);
+                break;
+            case R.id.bt_index_personal_information://个人资料
+                toClass(getActivity(), PersonalInformationaActivity.class);//跳转个人资料
                 break;
         }
     }
@@ -150,8 +170,9 @@ public class Index_Fragment extends BaseFragment {
                             depositMoney.setText("已提现金额:"+StringToIntUtils.StringToInt(bean.getData().getLiquidated())+"元");
                             rent.setText("待租借:"+bean.getData().getRentCount()+"个");
                             rentting.setText("租借中:"+bean.getData().getNoRentCount()+"个");
-                            offLine.setText("离线:"+bean.getData().getOffLineCount()+"台");
-                            onLine.setText("在线:"+bean.getData().getOnLineCount()+"台");
+                            offLine.setText(bean.getData().getOffLineCount()+"");
+                            onLine.setText(bean.getData().getOnLineCount()+"");
+                            index_device_allcount.setText(bean.getData().getDeviceCount()+"");
                         }else if(bean.getCode()==-10 || bean.getMsg().equals("您的账户已在其他设备上登录")){
                             signOutDialog();
                             usertoken.edit().clear().commit();
@@ -238,7 +259,7 @@ public class Index_Fragment extends BaseFragment {
     private void appUpdateOperating(Activity activity){
         new UpdateAppManager.Builder()
                 .setActivity(activity)
-                .setUpdateUrl("http://192.168.0.81:8080/agentCenter/account/version/update?type=2")
+                .setUpdateUrl("https://www.jzcdsc.com/chargeAgent-0.0.1-SNAPSHOT/agentCenter/account/version/update?type=2")
                 .setHttpManager(new UpdateAppHttpUtil())
                 .setTopPic(R.mipmap.top_8)
                 .build()

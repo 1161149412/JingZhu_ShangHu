@@ -28,7 +28,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-import butterknife.Unbinder;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
@@ -44,7 +43,6 @@ public class ZhangDan_Fragment extends BaseFragment {
     RecyclerView recycler;
     @BindView(R.id.swipeRefreshLayout)
     SwipeRefreshLayout swipeRefreshLayout;
-    Unbinder unbinder;
 
     private List<String> list;
     private Adapter_ZhangDan adapter;

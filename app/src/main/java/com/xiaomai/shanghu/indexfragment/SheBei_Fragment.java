@@ -65,7 +65,7 @@ public class SheBei_Fragment extends BaseFragment {
 
     @Override
     protected void initView(View view) {
-        AddDefaultScreenAreaUtils.addDefaultScreenArea(btFilter,10,10,10,10);//增加点击范围
+        AddDefaultScreenAreaUtils.addDefaultScreenArea(btFilter,10,10,30,10);//增加点击范围
         usertoken= getActivity().getSharedPreferences("mytoken", 0);
         token = usertoken.getString("token","0");
         dialog = DialogUtils.showDialog_progressbar(getContext());

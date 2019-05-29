@@ -27,7 +27,7 @@ public class Adapter_Laixian extends BaseQuickAdapter<PageDeviceListBean.DataBea
         helper.setText(R.id.tv_slot,item.getStock()+"槽");//插槽数
         helper.setText(R.id.tv_price,item.getDetails()+"/小时");//价格
         helper.setText(R.id.item_lixian_money,item.getSumProfit()+"");//累计收益
-        helper.setText(R.id.tv_lixian_time,"离线"+item.getOfflineTime());//离线时长
+        helper.setText(R.id.tv_lixian_time,"离线\n"+item.getOfflineTime());//离线时长
     }
 
 }

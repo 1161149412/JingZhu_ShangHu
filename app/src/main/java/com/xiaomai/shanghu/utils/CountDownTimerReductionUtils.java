@@ -5,16 +5,18 @@ import android.os.CountDownTimer;
 import android.text.SpannableString;
 import android.widget.TextView;
 
+import com.xiaomai.shanghu.R;
+
 
 /**
  * Created by Administrator on 2016/12/4 0004.
  */
-public class CountDownTimerUtils extends CountDownTimer {
+public class CountDownTimerReductionUtils extends CountDownTimer {
     private TextView mTextView;
     /**
      *60s后获取验证码
      */
-    public CountDownTimerUtils(TextView mTextView, long millisInFuture, long countDownInterval) {
+    public CountDownTimerReductionUtils(TextView mTextView, long millisInFuture, long countDownInterval) {
         super(millisInFuture, countDownInterval);
         this.mTextView=mTextView;
 
@@ -29,6 +31,7 @@ public class CountDownTimerUtils extends CountDownTimer {
         SpannableString spannableString = new SpannableString(mTextView.getText().toString());
        // ForegroundColorSpan span = new ForegroundColorSpan(Color.WHITE);
         //spannableString.setSpan(span, 0, 2, Spannable.SPAN_INCLUSIVE_EXCLUSIVE);//将倒计时的时间设置为红色
+        mTextView.setBackgroundResource(R.drawable.button_kong);//设置为空背景
         mTextView.setText(spannableString);
     }
 
@@ -37,6 +40,6 @@ public class CountDownTimerUtils extends CountDownTimer {
         mTextView.setText("获取验证码");
         mTextView.setTextColor(Color.parseColor("#E1B872"));
         mTextView.setClickable(true);//重新获得点击
-//        mTextView.setBackgroundResource(R.drawable.login_button_true);  //还原背景色
+        mTextView.setBackgroundResource(R.drawable.login_button_true);  //还原背景色
     }
 }

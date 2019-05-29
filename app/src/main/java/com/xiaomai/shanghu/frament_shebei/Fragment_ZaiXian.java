@@ -95,7 +95,7 @@ public class Fragment_ZaiXian extends BaseFragment {
             slot = "";
         }
         Condition condition = new Condition("",""+1,""+str,""+slot);
-        Info info = new Info(1+"",30+"",condition);
+        Info info = new Info(1+"",500+"",condition);
         Gson gson = new Gson();
         String strJson = gson.toJson(info);
 

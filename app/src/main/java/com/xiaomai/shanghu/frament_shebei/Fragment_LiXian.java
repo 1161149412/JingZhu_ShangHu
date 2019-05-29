@@ -105,7 +105,7 @@ public class Fragment_LiXian extends BaseFragment {
             slot = "";
         }
         Condition condition = new Condition("",""+0,""+deviceld,""+slot);
-        Info info = new Info(1+"",30+"",condition);
+        Info info = new Info(1+"",500+"",condition);
         Gson gson = new Gson();
         String strJson = gson.toJson(info);
 

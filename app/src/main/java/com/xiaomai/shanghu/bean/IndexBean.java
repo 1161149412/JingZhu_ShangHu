@@ -2,9 +2,10 @@ package com.xiaomai.shanghu.bean;
 
 public class IndexBean {
 
+
     /**
      * code : 1
-     * data : {"bank":"","credit_card":"","day_earn":"0","freeze_money":"0","is_havecard":"","liquidated":"2100","mobile":"","month_earn":"2380","noRentCount":"1","offLineCount":"0","onLineCount":"1","orderFinish":"2","orderIng":"0","orderWait":"0","real_name":"","rentCount":"4","sub_bank":"","total_earn":"2380","unliquidated":"280","yestoday_earn":"0"}
+     * data : {"bank":"","credit_card":"","day_earn":"0","deviceCount":"0","freeze_money":"1543400","is_havecard":"","liquidated":"0","mobile":"","month_earn":"0","noRentCount":"0","offLineCount":"0","onLineCount":"0","orderFinish":"12","orderIng":"0","orderWait":"0","real_name":"","rentCount":"0","sub_bank":"","total_earn":"301000000","unliquidated":"299456600","yestoday_earn":"0"}
      * msg : 操作成功
      */
 
@@ -41,28 +42,30 @@ public class IndexBean {
          * bank :
          * credit_card :
          * day_earn : 0
-         * freeze_money : 0
+         * deviceCount : 0
+         * freeze_money : 1543400
          * is_havecard :
-         * liquidated : 2100
+         * liquidated : 0
          * mobile :
-         * month_earn : 2380
-         * noRentCount : 1
+         * month_earn : 0
+         * noRentCount : 0
          * offLineCount : 0
-         * onLineCount : 1
-         * orderFinish : 2
+         * onLineCount : 0
+         * orderFinish : 12
          * orderIng : 0
          * orderWait : 0
          * real_name :
-         * rentCount : 4
+         * rentCount : 0
          * sub_bank :
-         * total_earn : 2380
-         * unliquidated : 280
+         * total_earn : 301000000
+         * unliquidated : 299456600
          * yestoday_earn : 0
          */
 
         private String bank;
         private String credit_card;
         private String day_earn;
+        private String deviceCount;
         private String freeze_money;
         private String is_havecard;
         private String liquidated;
@@ -103,6 +106,14 @@ public class IndexBean {
 
         public void setDay_earn(String day_earn) {
             this.day_earn = day_earn;
+        }
+
+        public String getDeviceCount() {
+            return deviceCount;
+        }
+
+        public void setDeviceCount(String deviceCount) {
+            this.deviceCount = deviceCount;
         }
 
         public String getFreeze_money() {

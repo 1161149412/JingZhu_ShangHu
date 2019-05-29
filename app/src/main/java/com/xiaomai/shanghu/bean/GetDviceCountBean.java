@@ -7,9 +7,10 @@ package com.xiaomai.shanghu.bean;
 
 public class GetDviceCountBean {
 
+
     /**
      * code : 1
-     * data : {"offline":0,"online":0}
+     * data : {"all":0,"offline":0,"online":0}
      * msg : 操作成功
      */
 
@@ -43,12 +44,22 @@ public class GetDviceCountBean {
 
     public static class DataBean {
         /**
+         * all : 0
          * offline : 0
          * online : 0
          */
 
+        private int all;
         private int offline;
         private int online;
+
+        public int getAll() {
+            return all;
+        }
+
+        public void setAll(int all) {
+            this.all = all;
+        }
 
         public int getOffline() {
             return offline;

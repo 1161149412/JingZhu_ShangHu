@@ -383,15 +383,33 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/bt_sure"
-        android:layout_width="@dimen/dp_260"
-        android:layout_height="@dimen/dp_44"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/dp_20"
-        android:background="@drawable/login_button_true"
-        android:gravity="center"
-        android:text="确认提现"
-        android:textColor="#fff"
-        android:textSize="@dimen/sp_17" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/bt_sure"
+            android:layout_width="@dimen/dp_260"
+            android:layout_height="@dimen/dp_44"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp_50"
+            android:background="@drawable/login_button_true"
+            android:gravity="center"
+            android:text="确认提现"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sp_17" />
+    </RelativeLayout>
+
+    <!--<TextView-->
+        <!--android:id="@+id/bt_sure"-->
+        <!--android:layout_width="@dimen/dp_260"-->
+        <!--android:layout_height="@dimen/dp_44"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="@dimen/dp_20"-->
+        <!--android:background="@drawable/login_button_true"-->
+        <!--android:gravity="center"-->
+        <!--android:text="确认提现"-->
+        <!--android:textColor="#fff"-->
+        <!--android:textSize="@dimen/sp_17" />-->
 </LinearLayout>

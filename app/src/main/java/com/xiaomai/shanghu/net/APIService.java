@@ -1,6 +1,7 @@
 package com.xiaomai.shanghu.net;
 
 
+import com.xiaomai.shanghu.bean.AddVipBean;
 import com.xiaomai.shanghu.bean.AppUpdateBean;
 import com.xiaomai.shanghu.bean.DepositsBean;
 import com.xiaomai.shanghu.bean.DeviceFreezeListBean;
@@ -23,6 +24,7 @@ import com.xiaomai.shanghu.bean.UserLoginBean;
 import io.reactivex.Observable;
 import okhttp3.RequestBody;
 import retrofit2.http.Body;
+import retrofit2.http.DELETE;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
@@ -131,7 +133,26 @@ public interface APIService {
     Observable<GetBalanceBean> getBalance();
 
     //TODO APP更新
-    @GET("agentCenter/account/version/update")
+    @GET("agentCenter/account/version/update") //type  1：为代理端  2：为商户端
     Observable<AppUpdateBean> appUpdata(@Query("type") String type);
 
+    //TODO 分页获取白名单列表
+    @POST("seller/whiteList/pageWhiteList")
+    Observable<AddVipBean> getPageWhiteList(@Body RequestBody requestBody);
+
+    //TODO 新增商户白名单
+    @POST("seller/whiteList/save")
+    Observable<GetCodeBean> addSave(@Body RequestBody requestBody);
+
+    //TODO 发送白名单添加的短信验证码
+    @GET("seller/whiteList/sendCode")
+    Observable<GetCodeBean> getSendCode(@Query("mobile") String mobile);
+
+    //TODO 发送测试白名单短信验证码
+    @GET("seller/whiteList/sendTestCode")
+    Observable<GetCodeBean> sendTestCode(@Query("mobile") String mobile);
+
+    //TODO 删除该条白名单
+    @DELETE("seller/whiteList/{id}")
+    Observable<GetCodeBean> delete(@Path("id") String id);
 }

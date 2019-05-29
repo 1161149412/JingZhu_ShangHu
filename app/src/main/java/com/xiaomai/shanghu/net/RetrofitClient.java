@@ -4,6 +4,7 @@ package com.xiaomai.shanghu.net;
 import android.support.annotation.NonNull;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
@@ -28,7 +29,8 @@ public class RetrofitClient {
 //    private String baseUrl = "https://www.jzcdsc.com/chargeSeller-0.0.1-SNAPSHOT/"; //正式地址
     private String baseUrl = "http://47.92.253.91:8080/sellDev/"; //测试地址
 
-    private String updateUrl = "http://192.168.0.81:8080/";//app更新地址（测试）
+    private String updateUrl = "https://www.jzcdsc.com/chargeAgent-0.0.1-SNAPSHOT/"; //APP更新正式地址
+//    private String updateUrl = "http://192.168.0.81:8080/";//APP更新地址（测试）
 
     private RetrofitClient() {
     }
@@ -84,6 +86,8 @@ public class RetrofitClient {
         OkHttpClient client = new OkHttpClient().newBuilder()
                 //设置Header
                 .addInterceptor(getHeaderInterceptor(token))
+                //超时时间
+                .connectTimeout(15, TimeUnit.SECONDS)
                 //设置拦截器
                 .addInterceptor(getInterceptor())
                 .build();
@@ -135,7 +139,7 @@ public class RetrofitClient {
         Retrofit retrofit = new Retrofit.Builder()
                 .client(client)
                 //设置网络请求的Url地址
-                .baseUrl(updateUrl)
+                .baseUrl(updateUrl) //TODO 注意修改正式服地址
                 //设置数据解析器
                 .addConverterFactory(GsonConverterFactory.create())
                 //设置网络请求适配器，使其支持RxJava与RxAndroid

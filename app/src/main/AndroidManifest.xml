@@ -14,42 +14,62 @@
         android:roundIcon="@mipmap/app_icon_180"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".LoginActivity"
-            android:screenOrientation="portrait"></activity>
-        <activity android:name=".tixian.TiXianActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".tixian.AddBankCardActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".tixian.TiXianJiLuActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".tixian.TiXianShowActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".filter.Filter_TixianActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".filter.Filter_SheBeiActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".details.SheBeiDetailsActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".freeze.FreezeActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".details.FreezeDetailsActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".tixian.PersonalInformationaActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".tixian.EditProfileActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".filter.Filter_Freeze_SheBeiActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".WelcomeActivity"
-            android:theme="@style/styleSplashImage"
-            android:screenOrientation="portrait">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tixian.TiXianActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tixian.AddBankCardActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tixian.TiXianJiLuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tixian.TiXianShowActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".filter.Filter_TixianActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".filter.Filter_SheBeiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".details.SheBeiDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".freeze.FreezeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".details.FreezeDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tixian.PersonalInformationaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tixian.EditProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".filter.Filter_Freeze_SheBeiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".vipconfig.VipConfigActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/styleSplashImage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".vipconfig.AddVipActivity"></activity>
     </application>
 
 </manifest>
