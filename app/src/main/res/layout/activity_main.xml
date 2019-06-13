@@ -40,7 +40,7 @@
                     android:id="@+id/index_icon"
                     android:layout_width="@dimen/dp_23"
                     android:layout_height="@dimen/dp_23"
-                    android:src="@mipmap/index_home_hover" />
+                    android:src="@mipmap/index_home_hover_new" />
 
                 <TextView
                     android:id="@+id/index_name"
@@ -70,13 +70,13 @@
                     android:id="@+id/zhangdan_icon"
                     android:layout_width="@dimen/dp_23"
                     android:layout_height="@dimen/dp_23"
-                    android:src="@mipmap/index_bill_nomal" />
+                    android:src="@mipmap/index_store_nomal" />
 
                 <TextView
                     android:id="@+id/zhangdan_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="账单"
+                    android:text="门店"
                     android:textColor="#464646"
                     android:textSize="@dimen/sp_12" />
             </LinearLayout>
@@ -100,13 +100,13 @@
                     android:id="@+id/shebei_icon"
                     android:layout_width="@dimen/dp_23"
                     android:layout_height="@dimen/dp_23"
-                    android:src="@mipmap/index_equipment_nomal" />
+                    android:src="@mipmap/index_me_nomal" />
 
                 <TextView
                     android:id="@+id/shebei_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="设备"
+                    android:text="我的"
                     android:textColor="#464646"
                     android:textSize="@dimen/sp_12" />
             </LinearLayout>

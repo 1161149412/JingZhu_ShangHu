@@ -96,15 +96,33 @@
         </RelativeLayout>
     </LinearLayout>
 
-    <Button
-        android:id="@+id/bt_login"
-        android:layout_width="@dimen/dp_260"
-        android:layout_height="@dimen/dp_44"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/dp_102"
-        android:background="@drawable/login_button"
-        android:gravity="center"
-        android:text="立即登录"
-        android:textColor="#F6F6F6"
-        android:textSize="@dimen/sp_17" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/bt_login"
+            android:layout_width="@dimen/dp_260"
+            android:layout_height="@dimen/dp_44"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp_55"
+            android:background="@drawable/login_button_true"
+            android:gravity="center"
+            android:text="立即登录"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sp_17" />
+    </RelativeLayout>
+
+    <!--<Button-->
+        <!--android:id="@+id/bt_login"-->
+        <!--android:layout_width="@dimen/dp_260"-->
+        <!--android:layout_height="@dimen/dp_44"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="@dimen/dp_102"-->
+        <!--android:background="@drawable/login_button"-->
+        <!--android:gravity="center"-->
+        <!--android:text="立即登录"-->
+        <!--android:textColor="#F6F6F6"-->
+        <!--android:textSize="@dimen/sp_17" />-->
 </LinearLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".tixian.AddBankCardActivity">
+
+    <RelativeLayout style="@style/titlesytle">
+
+        <RelativeLayout
+            android:id="@+id/back"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="match_parent">
+
+            <ImageView style="@style/titleback" />
+
+        </RelativeLayout>
+
+        <TextView
+            style="@style/titletext"
+            android:text="门店详情" />
+
+        <ImageView
+            android:id="@+id/img_msg"
+            android:layout_width="@dimen/dp_16"
+            android:layout_height="@dimen/dp_16"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_13"
+            android:src="@mipmap/store_message" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_37"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@drawable/layout_bg_white"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="@dimen/dp_3"
+                android:layout_height="@dimen/dp_15"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:background="#FF5603"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:textSize="@dimen/sp_15"
+                android:textColor="#363636"
+                android:text="商户的设备"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_50"
+                android:textSize="@dimen/sp_15"
+                android:textColor="#363636"
+                android:text="在线："/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_3"
+                android:textSize="@dimen/sp_15"
+                android:textColor="#363636"
+                android:text="0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_3"
+                android:textSize="@dimen/sp_15"
+                android:textColor="#363636"
+                android:text="台"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:textSize="@dimen/sp_15"
+                android:textColor="#363636"
+                android:text="离线："/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_3"
+                android:textSize="@dimen/sp_15"
+                android:textColor="#E55C5C"
+                android:text="0"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_3"
+                android:textSize="@dimen/sp_15"
+                android:textColor="#363636"
+                android:text="台"/>
+
+        </LinearLayout>
+
+       <android.support.v4.widget.NestedScrollView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+           <android.support.v7.widget.RecyclerView
+               android:id="@+id/recycler"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+       </android.support.v4.widget.NestedScrollView>
+
+
+
+    </LinearLayout>
+</LinearLayout>

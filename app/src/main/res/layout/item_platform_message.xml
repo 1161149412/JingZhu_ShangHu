@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/index_frame"
+    android:layout_margin="@dimen/dp_12">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_30"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="@dimen/dp_13"
+            android:layout_height="@dimen/dp_13"
+            android:layout_marginLeft="@dimen/dp_13"
+            android:src="@mipmap/news_icon"/>
+
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_7"
+            android:textSize="@dimen/sp_14"
+            android:textColor="#363636"
+            android:text="新功能版本于2019年5月30日上线~"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_13"
+        android:layout_marginLeft="@dimen/dp_33"
+        android:textColor="#464646"
+        android:textSize="@dimen/sp_12"
+        android:text="内容："/>
+
+
+    <TextView
+        android:id="@+id/item_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_33"
+        android:layout_marginRight="@dimen/dp_61"
+        android:layout_marginBottom="@dimen/dp_14"
+        android:textColor="#464646"
+        android:textSize="@dimen/sp_12"
+        android:text="1.新增门店详情内容，我的账单等界面以及功能；2.修复一堆你们不知道的BUG；3.完善整个系统。："/>
+
+</LinearLayout>

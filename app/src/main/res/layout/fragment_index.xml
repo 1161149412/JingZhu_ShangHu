@@ -5,63 +5,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <!--<TextView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="@dimen/dp_30"-->
-        <!--android:background="@color/appbar"-->
-        <!--android:gravity="center"-->
-        <!--android:text="首页"-->
-        <!--android:textColor="#fff"-->
-        <!--android:textSize="@dimen/sp_19" />-->
-
     <RelativeLayout style="@style/titlesytle">
 
         <TextView
             style="@style/titletext"
             android:text="首页" />
 
-
-        <TextView
-            android:id="@+id/bt_filter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <RelativeLayout
+            android:id="@+id/bt_notice"
+            android:layout_width="@dimen/dp_22"
+            android:layout_height="@dimen/dp_19"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:layout_marginRight="@dimen/dp_29"
-            android:text="注销"
-            android:textColor="#fff"
-            android:textSize="@dimen/sp_14" />
+            android:layout_marginRight="@dimen/dp_14">
 
-        <ImageView
-            android:id="@+id/personal_information"
-            android:layout_width="@dimen/dp_13"
-            android:layout_height="@dimen/dp_11"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="@dimen/dp_13"
-            android:src="@mipmap/sign_out_icon" />
+            <ImageView
+                android:id="@+id/img_msg"
+                android:layout_width="@dimen/dp_19"
+                android:layout_height="match_parent"
+                android:src="@mipmap/news" />
 
-        <!--<TextView-->
-            <!--android:id="@+id/bt_filter"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:layout_alignParentRight="true"-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:layout_marginRight="@dimen/dp_29"-->
-            <!--android:text="注销"-->
-            <!--android:textColor="#fff"-->
-            <!--android:textSize="@dimen/sp_14" />-->
+            <TextView
+                android:id="@+id/tv_msg"
+                android:layout_width="@dimen/dp_13"
+                android:layout_height="@dimen/dp_8"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/login_button"
+                android:gravity="center"
+                android:textSize="@dimen/dp_7"
+                android:text="9"/>
+        </RelativeLayout>
 
-        <!--<ImageView-->
-            <!--android:id="@+id/personal_information"-->
-            <!--android:layout_width="@dimen/dp_19"-->
-            <!--android:layout_height="@dimen/dp_16"-->
-            <!--android:layout_alignParentRight="true"-->
-            <!--android:layout_centerVertical="true"-->
-            <!--android:layout_marginRight="@dimen/dp_13"-->
-            <!--android:src="@mipmap/people" />-->
+
     </RelativeLayout>
-
 
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
@@ -72,30 +48,12 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/dp_120"
+                android:layout_height="@dimen/dp_80"
                 android:background="@color/appbar"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_15"
-                    android:text="昨日收益(元)"
-                    android:textColor="#fff"
-                    android:textSize="@dimen/sp_13" />
-
-                <TextView
-                    android:id="@+id/yesterday_money"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dp_2"
-                    android:text="0.00"
-                    android:textColor="#fff"
-                    android:textSize="@dimen/dp_25" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -110,20 +68,47 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="累计收益(元)"
-                            android:textColor="#fff"
-                            android:textSize="@dimen/sp_13" />
-
-                        <TextView
                             android:id="@+id/all_money"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dp_10"
                             android:text="0.00"
                             android:textColor="#fff"
                             android:textSize="@dimen/sp_16" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:text="累计收益(元)"
+                            android:textColor="#fff"
+                            android:textSize="@dimen/sp_13" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="11dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/yesterday_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.00"
+                            android:textColor="#fff"
+                            android:textSize="@dimen/sp_16" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:text="昨日收益(元)"
+                            android:textColor="#fff"
+                            android:textSize="@dimen/sp_13" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -132,46 +117,22 @@
                         android:layout_weight="1"
                         android:gravity="center"
                         android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="本月收益(元)"
-                            android:textColor="#fff"
-                            android:textSize="@dimen/sp_13" />
 
                         <TextView
                             android:id="@+id/month_money"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dp_10"
                             android:text="0.00"
                             android:textColor="#fff"
                             android:textSize="@dimen/sp_16" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="今日收益(元)"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:text="本月收益(元)"
                             android:textColor="#fff"
                             android:textSize="@dimen/sp_13" />
-
-                        <TextView
-                            android:id="@+id/today_money"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="@dimen/dp_10"
-                            android:text="0.00"
-                            android:textColor="#fff"
-                            android:textSize="@dimen/sp_16" />
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
@@ -287,6 +248,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_47"
                 android:layout_marginTop="@dimen/dp_13"
@@ -315,7 +277,6 @@
                     android:id="@+id/textView" />
 
                 <Button
-                    android:id="@+id/btn_callPhone"
                     android:layout_width="@dimen/dp_73"
                     android:layout_height="@dimen/dp_25"
                     android:background="@drawable/index_button"
@@ -799,7 +760,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:text="个人资料"
+                                    android:text="银行卡管理"
                                     android:textColor="#363636"
                                     android:textSize="@dimen/sp_13" />
                             </LinearLayout>
@@ -810,24 +771,25 @@
 
             </com.bigman.wmzx.customcardview.library.CardView>
 
-
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:visibility="gone"
-                android:gravity="right">
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/dp_15"
+                android:gravity="center">
 
                 <TextView
-                    android:id="@+id/bt_index_zhuxiao"
-                    android:layout_width="@dimen/dp_64"
-                    android:layout_height="@dimen/dp_44"
-                    android:layout_gravity="center_horizontal"
-                    android:background="@drawable/logout_button"
-                    android:gravity="center"
-                    android:text="注销"
-                    android:textColor="#fff"
-                    android:textSize="@dimen/sp_17" />
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="客服电话："
+                    android:textSize="@dimen/sp_14" />
+                <TextView
+                    android:id="@+id/btn_callPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="028-86666869"
+                    android:textColor="@color/appbar"
+                    android:textSize="@dimen/sp_14" />
             </LinearLayout>
 
         </LinearLayout>

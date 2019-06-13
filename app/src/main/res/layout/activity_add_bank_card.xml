@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#FFFFFF"
     tools:context=".tixian.AddBankCardActivity">
 
     <RelativeLayout
@@ -38,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/dp_13"
-        android:layout_marginTop="@dimen/dp_23"
+        android:layout_marginTop="@dimen/dp_10"
         android:layout_marginRight="@dimen/dp_13"
         android:orientation="vertical">
 
@@ -90,6 +91,34 @@
                 android:layout_marginLeft="@dimen/dp_16"
                 android:background="@null"
                 android:hint="请输入银行卡开户银行"
+                android:singleLine="true"
+                android:textColor="#363636"
+                android:textColorHint="#868686"
+                android:textSize="@dimen/sp_15" />
+        </LinearLayout>
+
+        <include layout="@layout/line_view" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_49"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开户支行"
+                android:textColor="#363636"
+                android:textSize="@dimen/sp_15" />
+
+            <EditText
+                android:id="@+id/edit_put_kaihu_back_zhname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:background="@null"
+                android:hint="请选择开户支行"
                 android:singleLine="true"
                 android:textColor="#363636"
                 android:textColorHint="#868686"
@@ -162,15 +191,35 @@
         android:layout_height="@dimen/dp_8"
         android:background="#F6F6F6" />
 
-    <TextView
-        android:id="@+id/bt_save"
-        android:layout_width="@dimen/dp_260"
-        android:layout_height="@dimen/dp_44"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="@dimen/dp_203"
-        android:background="@drawable/login_button"
-        android:gravity="center"
-        android:text="保存"
-        android:textColor="#fff"
-        android:textSize="@dimen/sp_17" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/bt_save"
+            android:layout_width="@dimen/dp_260"
+            android:layout_height="@dimen/dp_44"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/dp_50"
+            android:background="@drawable/login_button_true"
+            android:gravity="center"
+            android:text="保存"
+            android:textColor="#fff"
+            android:textSize="@dimen/sp_17" />
+
+    </RelativeLayout>
+
+    <!--<TextView-->
+        <!--android:id="@+id/bt_save"-->
+        <!--android:layout_width="@dimen/dp_260"-->
+        <!--android:layout_height="@dimen/dp_44"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="@dimen/dp_203"-->
+        <!--android:background="@drawable/login_button_true"-->
+        <!--android:gravity="center"-->
+        <!--android:text="保存"-->
+        <!--android:textColor="#fff"-->
+        <!--android:textSize="@dimen/sp_17" />-->
 </LinearLayout>

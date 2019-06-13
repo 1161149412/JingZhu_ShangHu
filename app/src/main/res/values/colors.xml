@@ -12,4 +12,11 @@
     <color name="weitongguo">#E55C5C</color>
     <color name="yitongguo">#666666</color>
     <color name="shengqingzhong">#117AE7</color>
+
+    <color name="bottom_menu_layout_color">#00000000</color>
+    <color name="bottom_menu_btn_text_commom_color">#FF5603</color>
+    <color name="bottom_menu_btn_bg_press_color">#EEEEEE</color>
+    <color name="bottom_menu_btn_bg_common_color">#FFFFFF</color>
+    <color name="bottom_menu_btn_text_stress_color">#FF0000</color>
+
 </resources>

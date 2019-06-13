@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout style="@style/titlesytle">
+
+        <RelativeLayout
+            android:id="@+id/back"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="match_parent">
+
+            <ImageView style="@style/titleback" />
+
+        </RelativeLayout>
+
+        <TextView
+            style="@style/titletext"
+            android:text="银行卡管理" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/include_null"
+                layout="@layout/null_card_layout"/>
+
+            <LinearLayout
+                android:id="@+id/view_bank"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_121"
+                android:visibility="gone"
+                android:background="@mipmap/card_mine_bg"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_marginRight="@dimen/dp_14"
+                android:layout_marginTop="@dimen/dp_17"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_18"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_20"
+                        android:layout_height="@dimen/dp_16"
+                        android:layout_marginLeft="@dimen/dp_22"
+                        android:layout_gravity="center_vertical"
+                        android:src="@mipmap/card_mine_write" />
+
+                    <TextView
+                        android:id="@+id/tv_back_card_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_13"
+                        android:text="中国工商银行"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/sp_16" />
+
+                    <TextView
+                        android:id="@+id/tv_back_card_name_zh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_13"
+                        android:text="(支行)"
+                        android:textColor="#ffffff"
+                        android:textSize="@dimen/sp_16" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="right">
+                       <TextView
+                           android:id="@+id/tv_update_info"
+                           android:layout_width="@dimen/dp_76"
+                           android:layout_height="wrap_content"
+                           android:layout_marginRight="@dimen/dp_20"
+                           android:layout_gravity="center_vertical"
+                           android:gravity="center"
+                           android:background="@drawable/button_bg_xg"
+                           android:textColor="#FFFFFF"
+                           android:textSize="@dimen/sp_13"
+                           android:text="修改信息"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_back_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6217 **** **** **** 9131"
+                        android:textColor="#fff"
+                        android:textSize="@dimen/sp_15" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16">
+
+                    <TextView
+                        android:id="@+id/tv_back_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_14"
+                        android:layout_marginLeft="@dimen/dp_22"
+                        android:textColor="#fff"
+                        android:text="姓名"/>
+
+                    <TextView
+                        android:id="@+id/tv_back_tle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textSize="@dimen/sp_14"
+                        android:textColor="#fff"
+                        android:layout_marginRight="@dimen/dp_20"
+                        android:layout_marginLeft="@dimen/dp_22"
+                        android:text="136 6920 0087"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_add_back_card"
+            android:layout_width="@dimen/dp_260"
+            android:layout_height="@dimen/dp_44"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dp_50"
+            android:background="@drawable/login_button_true"
+            android:gravity="center"
+            android:text="立即添加"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sp_17" />
+    </RelativeLayout>
+
+</LinearLayout>

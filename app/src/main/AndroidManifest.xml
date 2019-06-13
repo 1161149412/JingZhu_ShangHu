@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.xiaomai.shanghu">
+    package="com.xiaomai.yyshanghu">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
@@ -69,7 +69,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".vipconfig.AddVipActivity"></activity>
+        <activity android:name=".vipconfig.AddVipActivity" />
+        <activity android:name=".indexfragment.mypage.IDCardProofActivity" />
+        <activity android:name=".indexfragment.mypage.CertificationInfoActivity" />
+        <activity android:name=".indexfragment.mypage.OpenLicenseActivity" />
+        <activity android:name=".indexfragment.mypage.BankCardManagementActivity" />
+        <activity android:name=".indexfragment.mypage.Staff_MangementActivity" />
+        <activity android:name=".indexfragment.mypage.AddStaffActivity" />
+        <activity android:name=".indexfragment.mypage.UpdateTelActivity" />
+        <activity android:name=".indexfragment.mypage.UpdateNewTelActivity" />
+        <activity android:name=".indexfragment.mypage.UpdateSuccessActivity" />
+        <activity android:name=".indexfragment.indexpage.PlatformMessageActivity" />
+        <activity android:name=".indexfragment.storepage.activity.StoreDetailsActivity" />
+        <activity android:name=".indexfragment.storepage.activity.StoreInformationActivity" />
+        <activity android:name=".staff.StaffStoreActivity" />
+        <activity android:name=".staff.StaffStoreDetailsActivity" />
+        <activity android:name=".staff.StaffStoreInformationActivity"></activity>
     </application>
 
 </manifest>
